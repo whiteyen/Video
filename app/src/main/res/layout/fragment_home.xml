@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        >
+        <com.hejunlin.superindicatorlibray.LoopViewPager
+            android:id="@+id/loop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </com.hejunlin.superindicatorlibray.LoopViewPager>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom">
+            <com.hejunlin.superindicatorlibray.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+            </com.hejunlin.superindicatorlibray.CircleIndicator>
+        </FrameLayout>
+    </FrameLayout>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gv_channel"
+        android:verticalSpacing="6dp"
+        android:horizontalSpacing="6dp"
+
+        android:numColumns="3"
+        >
+
+    </GridView>
+
+
+
+</LinearLayout>
