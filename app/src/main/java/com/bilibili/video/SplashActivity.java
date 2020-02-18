@@ -8,6 +8,8 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.bilibili.video.home.HomeActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -20,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
     private static final int GO_HOME = 1;
     private static final int GO_GUIDE = 2;
 
-    private static int ENTER_DURATION = 3000;//3s
+    private static int ENTER_DURATION = 1000;//3s
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -40,6 +42,7 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);

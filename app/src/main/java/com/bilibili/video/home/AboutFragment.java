@@ -1,11 +1,12 @@
-package com.bilibili.video;
+package com.bilibili.video.home;
 
 
+import com.bilibili.video.R;
 import com.bilibili.video.base.BaseFragment;
 
-public class VideoFragment extends BaseFragment {
+public class AboutFragment extends BaseFragment {
 
-
+    
     @Override
     protected void initData() {
 
@@ -13,7 +14,7 @@ public class VideoFragment extends BaseFragment {
 
     @Override
     protected int getLayoutID() {
-        return R.layout.fragment_video;
+        return R.layout.fragment_about;
     }
 
     @Override

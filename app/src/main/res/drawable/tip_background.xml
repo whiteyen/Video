@@ -2,7 +2,11 @@
     android:shape="rectangle">
 
     <!--梯度渐变-->
-
+    <gradient
+        android:angle="-270"
+        android:startColor="@color/transparentWhite"
+        android:endColor="@color/transparentBlack"
+        />
 
 
 </shape>

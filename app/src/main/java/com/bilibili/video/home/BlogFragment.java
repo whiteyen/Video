@@ -1,4 +1,4 @@
-package com.bilibili.video;
+package com.bilibili.video.home;
 
 
 import android.view.View;
@@ -6,7 +6,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-
+import com.bilibili.video.R;
 import com.bilibili.video.base.BaseFragment;
 import com.daimajia.numberprogressbar.NumberProgressBar;
 

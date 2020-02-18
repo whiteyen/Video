@@ -1,6 +1,7 @@
-package com.bilibili.video;
+package com.bilibili.video.home;
 
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,13 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bilibili.video.R;
 import com.bilibili.video.base.BaseFragment;
+import com.bilibili.video.detail.DetailListActivity;
+import com.bilibili.video.favorite.FavoriteActivity;
+import com.bilibili.video.history.HistoryActivity;
+import com.bilibili.video.live.LiveActivity;
+import com.bilibili.video.model.Channel;
 import com.hejunlin.superindicatorlibray.CircleIndicator;
 import com.hejunlin.superindicatorlibray.LoopViewPager;
 
@@ -18,7 +25,7 @@ import butterknife.BindView;
 
 public class HomeFragment extends BaseFragment {
 
-
+    private static final String TAG = HomeFragment.class.getSimpleName();
     @BindView(R.id.loop)
     LoopViewPager mLoopViewPager;
     @BindView(R.id.indicator)
@@ -44,20 +51,22 @@ public class HomeFragment extends BaseFragment {
 
         mGridView.setAdapter(new ChannelAdapter());
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d(TAG,"<<<"+position);
                 switch (position){
                     case 6:
-                        //TODO 跳转直播
+                        LiveActivity.lauch(getActivity());
                         break;
                     case 7:
-                        //TODO 跳转收藏
+                        FavoriteActivity.lauch(getActivity());
                         break;
                     case 8:
-                        //TODO  跳转收藏记录
+                        HistoryActivity.lauch(getActivity());
                         break;
                      default:
-                         //TODO 跳转频道
+                         DetailListActivity.lauchDetailList(getActivity(),position);
                          break;
                 }
             }

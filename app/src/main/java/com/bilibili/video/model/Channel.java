@@ -1,4 +1,4 @@
-package com.bilibili.video;
+package com.bilibili.video.model;
 
 import android.content.Context;
 
@@ -53,6 +53,8 @@ public class Channel implements Serializable {
                 break;
         }
     }
+
+
 
     public int getChannelId() {
         return channelId;

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/album_container"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_album_poster"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+
+            android:scaleType="centerCrop"
+            android:background="@drawable/ic_launcher"/>
+        <TextView
+            android:background="@drawable/tip_background"
+            android:id="@+id/tv_album_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="30dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="left"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        android:id="@+id/tv_album_name"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        />
+    
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.bilibili.video;
+package com.bilibili.video.home;
 
 
 
@@ -12,6 +12,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.Gravity;
 import android.view.MenuItem;
 
+import com.bilibili.video.FragmentManagerWrapper;
+import com.bilibili.video.R;
 import com.bilibili.video.base.BaseActivity;
 import com.bilibili.video.base.BaseFragment;
 
@@ -31,6 +33,7 @@ public class HomeActivity extends BaseActivity {
     }
     @Override
     protected void initView()  {
+
             setSupportActionBar();
             setActionBarIcon(R.drawable.ic_drawer_home);
             setTitle("首页");
@@ -40,7 +43,7 @@ public class HomeActivity extends BaseActivity {
             mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
             mActionBarDrawerToggle.syncState();
             mPreMenuItem  = mNavigationView.getMenu().getItem(0);
-            mPreMenuItem.setCheckable(true);
+            mPreMenuItem.setChecked(true);
             initFragment();
             handleNavigationViewItem();
     }
@@ -57,7 +60,7 @@ public class HomeActivity extends BaseActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if(mPreMenuItem!=null){
-                    mPreMenuItem.setCheckable(false);
+                    mPreMenuItem.setChecked(false);
                 }
                 switch (menuItem.getItemId()){
                     case R.id.navigation_about:
@@ -69,10 +72,11 @@ public class HomeActivity extends BaseActivity {
                         mToolbar.setTitle("我的博客");
                         break;
                     case R.id.navigation_video:
-                        switchFragment(VideoFragment.class);
+                        switchFragment(HomeFragment.class);
                         mToolbar.setTitle("视频");
                         break;
                 }
+                menuItem.setChecked(true);
                 mDrawerLayout.closeDrawer(Gravity.LEFT);
                 mPreMenuItem = menuItem;
                 return false;
@@ -94,7 +98,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        //TODO
+
 
     }
 }

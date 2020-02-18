@@ -20,7 +20,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         setContentView(getLayoutId());
         ButterKnife.bind(this);
-
+        mToolbar = bindViewId(R.id.toolbar);
         initView();
 
         initData();
@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         return (T) findViewById(resId);
     }
     protected void setSupportActionBar(){
-        mToolbar = bindViewId(R.id.toolbar);
+
         if(mToolbar!=null){
            setSupportActionBar(mToolbar);
         }
@@ -41,6 +41,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void setActionBarIcon(int resId){
         if(mToolbar!=null){
             mToolbar.setNavigationIcon(resId);
+        }
+    }
+    protected void setSupportArrowActionBar(boolean isSupport){
+        if(isSupport){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(isSupport);
         }
     }
 }

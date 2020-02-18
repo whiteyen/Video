@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/favorite_container"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_album_poster"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_loading" />
+
+    <CheckBox
+        android:layout_marginRight="20dp"
+        android:id="@+id/cb_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:button="@drawable/checkbox_style" />
+
+    <TextView
+        android:id="@+id/tv_video_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_album_poster"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:textColor="@color/brown"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bilibili.video.home.HomeActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
